@@ -1,19 +1,6 @@
-import hljs from 'highlight.js/lib/core';
-import json from 'highlight.js/lib/languages/json';
+import 'highlight.js/styles/tokyo-night-dark.min.css';
+import App from './app.js'
 
-hljs.registerLanguage('json', json);
+const { createApp } = Vue
 
-hljs.configure({
-  languages: ['json'],
-
-});
-
-// document.addEventListener('DOMContentLoaded', (event) => {
-//   document.querySelectorAll('pre code').forEach((block) => {
-//     hljs.highlightBlock(block);
-//   });
-// });
-hljs.highlightAll();
-
-console.log(hljs.listLanguages());
-
+createApp(App).mount('#app')
